@@ -2,6 +2,8 @@
 
 Types, API clients and other libs that are used across Corteza web applications, Corredor server and automation scripts.
 
+# These libs are clone of https://github.com/cortezaproject/corteza-js some extensions added to them
+
 ## Workflow
 
 ### Prerequisites

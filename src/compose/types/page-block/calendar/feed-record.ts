@@ -7,6 +7,10 @@ import { makeColors, Event } from './shared'
 // import variables from 'corteza-webapp-compose/src/themes/corteza-base/variables.scss'
 // const defaultColor = variables.primary
 // @todo fix this!
+
+interface MixedEvents extends Event {
+  recordFields: any;
+}
 const defaultColor = '#568ba2'
 
 interface FeedOptions {
@@ -58,7 +62,7 @@ function getRecordValue (record: Readonly<Record>, field: string): (string|undef
  * @returns {Array} A set of expanded events
  */
 function expandRecord (record: Readonly<Record>, feed: Feed): Event[] {
-  const events: Event[] = []
+  const events: MixedEvents[] = []
 
   const starts = getRecordValue(record, feed.startField)
   const ends = getRecordValue(record, feed.endField)
@@ -92,6 +96,7 @@ function expandRecord (record: Readonly<Record>, feed: Feed): Event[] {
         moduleID: record.module.moduleID,
         recordID: record.recordID,
       },
+      recordFields: record,
     })
   })
 
