@@ -3,7 +3,7 @@
   "description": "C3 JavaScript/TypeScript libs",
   "version": "2021.4.1",
   "license": "Apache-2.0",
-  "author": "Arslan <harslanhafeez@gmail.com>",
+  "author": "TG Tea,",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
