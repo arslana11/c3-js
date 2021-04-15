@@ -1,9 +1,9 @@
 {
-  "name": "c3-js",
+  "name": "@harslanhafeez/c3-js",
   "description": "C3 JavaScript/TypeScript libs",
   "version": "2021.4.1",
   "license": "Apache-2.0",
-  "author": "TG Tea,",
+  "author": "Arslan <harslanhafeez@gmail.com>",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

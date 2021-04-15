@@ -114,10 +114,15 @@ function expandRecord (record: Readonly<Record>, feed: Feed): Event[] {
  */
 export async function RecordFeed ($ComposeAPI: ComposeAPI, module: Module, namespace: Namespace, feed: Feed, range: Range): Promise<Event[]> {
   // Params for record fetching
+  // const params = {
+  //   namespaceID: namespace.namespaceID,
+  //   moduleID: module.moduleID,
+  //   filter: `date(${feed.startField}) >= '${range.start.toISOString()}' AND date(${feed.endField || feed.startField}) < '${range.end.toISOString()}'`,
+  // }
   const params = {
     namespaceID: namespace.namespaceID,
     moduleID: module.moduleID,
-    filter: `date(${feed.startField}) >= '${range.start.toISOString()}' AND date(${feed.endField || feed.startField}) < '${range.end.toISOString()}'`,
+    filter: `date(${feed.startField}) >= '${range.start.toISOString()}'`,
   }
 
   if (feed.options.prefilter) {
