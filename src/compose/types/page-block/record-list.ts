@@ -38,7 +38,7 @@ interface Options {
 
   // Module Fields Fields
   isModuleFieldsFilterEnabled: Boolean;
-  moduleFieldsFilter: String;
+  moduleFieldsFilter: string;
 }
 
 const defaults: Readonly<Options> = Object.freeze({
@@ -86,7 +86,7 @@ export class PageBlockRecordList extends PageBlock {
     if (!o) return
 
     Apply(this.options, o, CortezaID, 'moduleID')
-    Apply(this.options, o, String, 'prefilter', 'presort', 'selectMode', 'positionField', 'refField')
+    Apply(this.options, o, String, 'prefilter', 'presort', 'selectMode', 'positionField', 'refField', 'moduleFieldsFilter')
     Apply(this.options, o, Number, 'perPage')
 
     if (o.fields) {
