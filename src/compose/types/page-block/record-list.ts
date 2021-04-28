@@ -35,6 +35,10 @@ interface Options {
 
   // Ordered list of buttons to display in the block
   selectionButtons: Array<Button>;
+
+  // Module Fields Fields
+  isModuleFieldsFilterEnabled: Boolean;
+  moduleFieldsFilter: String;
 }
 
 const defaults: Readonly<Options> = Object.freeze({
@@ -64,6 +68,8 @@ const defaults: Readonly<Options> = Object.freeze({
   selectMode: 'multi',
 
   selectionButtons: [],
+  isModuleFieldsFilterEnabled: false,
+  moduleFieldsFilter: '',
 })
 
 export class PageBlockRecordList extends PageBlock {
@@ -105,6 +111,7 @@ export class PageBlockRecordList extends PageBlock {
       'hideRecordViewButton',
       'editable',
       'draggable',
+      'isModuleFieldsFilterEnabled',
     )
 
     if (o.selectionButtons) {
