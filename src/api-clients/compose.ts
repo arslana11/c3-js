@@ -550,6 +550,7 @@ export default class Compose {
     }
     const cfg: AxiosRequestConfig = {
       method: 'post',
+      timeout: 5 * 60 * 1000,
       url: this.pageUploadEndpoint({
         namespaceID, pageID,
       }),
@@ -1335,6 +1336,7 @@ export default class Compose {
     }
     const cfg: AxiosRequestConfig = {
       method: 'post',
+      timeout: 5 * 60 * 1000,
       url: this.recordUploadEndpoint({
         namespaceID, moduleID,
       }),
@@ -1726,6 +1728,7 @@ export default class Compose {
     }
     const cfg: AxiosRequestConfig = {
       method: 'get',
+      timeout: 5 * 60 * 1000,
       url: this.attachmentReadEndpoint({
         kind, namespaceID, attachmentID,
       }),
