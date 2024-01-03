@@ -79,6 +79,7 @@ export default class Messaging {
       withCredentials: true,
       baseURL: this.baseURL,
       headers: this.headers,
+      timeout: 5 * 60 * 1000,
     })
   }
 
