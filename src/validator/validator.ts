@@ -1,5 +1,5 @@
 import { IsOf } from '../guards'
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 
 interface Meta { [key: string]: unknown }
 

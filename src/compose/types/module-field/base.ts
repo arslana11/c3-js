@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import { IsOf } from '../../../guards'
 import { Apply, CortezaID, NoID } from '../../../cast'
 

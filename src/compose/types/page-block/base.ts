@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import { Apply } from '../../../cast'
 
 interface PageBlockStyleVariants {

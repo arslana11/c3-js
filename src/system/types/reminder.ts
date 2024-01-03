@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import { Apply, CortezaID, ISO8601Date, NoID } from '../../cast'
 
 interface KV {

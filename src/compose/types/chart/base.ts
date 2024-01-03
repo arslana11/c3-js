@@ -8,6 +8,7 @@ import {
   Report,
   dimensionFunctions,
   makeAlias,
+  lodashMerge,
 } from './util'
 
 import {
@@ -68,7 +69,7 @@ export class BaseChart {
       conf = { renderer, reports: reports || [], ...rest }
     }
 
-    this.config = (conf ? _.merge(this.defConfig(), conf) : false) || this.config || this.defConfig()
+    this.config = (conf ? lodashMerge(this.defConfig(), conf) : false) || this.config || this.defConfig()
   }
 
   /**

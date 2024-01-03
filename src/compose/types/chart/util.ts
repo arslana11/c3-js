@@ -1,3 +1,6 @@
+import merge from 'lodash/merge'
+
+export const lodashMerge = merge
 export const rgbaRegex = /^rgba\((\d+),.*?(\d+),.*?(\d+),.*?(\d*\.?\d*)\)$/
 
 const ln = (n: number) => Math.round(n < 0 ? 255 + n : (n > 255) ? n - 255 : n)
