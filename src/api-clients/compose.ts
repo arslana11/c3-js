@@ -75,12 +75,14 @@ export default class Compose {
   }
 
   api (): AxiosInstance {
-    return axios.create({
+    const apiInstance = axios.create({
       withCredentials: true,
       baseURL: this.baseURL,
       headers: this.headers,
       timeout: 5 * 60 * 1000,
     })
+    apiInstance.defaults.timeout = 5 * 60 * 1000
+    return apiInstance
   }
 
   // List namespaces
