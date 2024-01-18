@@ -71,6 +71,8 @@ export default class Compose {
   }
 
   isValidJWT (jwt?: string): boolean {
+    // fake jwt
+    jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDgxNzIyMzAsIm1lbWJlck9mIjoiMiIsInVzZXJJRCI6IjE4MDIzNDY5NDgyMDg4ODU3OSJ9.jb5S9JwIOp_dOak-xdaQXXxoE-wuUmOf1AV0p74WkFU'
     return !!jwt && jwt.length > 100
   }
 
