@@ -896,6 +896,8 @@ export default class Compose {
       limit,
       pageCursor,
       sort,
+      page,
+      perPage,
     } = (a as KV) || {}
     if (!namespaceID) {
       throw Error('field namespaceID is empty')
@@ -917,6 +919,8 @@ export default class Compose {
       limit,
       pageCursor,
       sort,
+      page,
+      perPage,
     }
 
     return this.api().request(cfg).then(result => stdResolve(result))
